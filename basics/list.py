@@ -67,3 +67,71 @@ list9.insert(0, 'hello')
 print(list9) # ['hello', 1, 2, 3, 4]
 
 
+# создайте список с числами от 1 до 10
+# выведите список с числами в обратном порядке 
+list1 = [1,2,3,4,5,6,7,8,9,10]
+list1 = list(range(1,11))
+# print(list1[::-1])
+# list1.reverse()
+# print(list(reversed(list1)))
+str="1 2 3 4 5 6 7 8 9 10" 
+slicedString=str[::-1]
+print (slicedString)
+
+# clear - чистит список
+list1 = [1,2,3,4]
+list1.clear()
+print(list1) # []
+
+# count - считает кол-во элемента, который передаем в метод в списке
+list1 = [1,2,3,4,1,2,1,4,1,6]
+list1.count(1) # 4
+list1.count(3) # 1
+list1.count('hello') # 0
+
+list1 = ['hello', 'hello', 'hello']
+list1.count('hello') # 3
+list1.count('l') # 0
+
+list1 = [11, 12, 13]
+list1.count(1) # 0
+
+# index - возвращает индекс данного элемента
+list2 = ['hello', 'world', 'makers']
+ind = list2.index('hello')
+print(ind) # 0
+list2.index('makers') # 2
+
+# sort - метод, который сортирует по возрастанию
+# если передать .sort(reverse=True), то сортирует по убыванию
+list3 = [34,12,67,12,89,45]
+list3.sort()
+print(list3) # [12, 12, 34, 45, 67, 89]
+list3.sort(reverse=True)
+print(list3) # [89, 67, 45, 34, 12, 12]
+# list3.sort()
+# list3.reverse()
+
+list4 = ['a', 'c', 'b', 'B', 'A']
+list4.sort()
+print(list4) # ['A', 'B', 'a', 'b', 'c']
+
+list5 = [10, 'b', 3, 'c', 5]
+# list5.sort() 
+# TypeError: '<' not supported between instances of 'str' and 'int'
+
+# copy - возвращает копию списка
+list1 = [1,2,3]
+list2 = list1.copy()
+list2.append(4)
+print(list1)
+print(list2)
+
+# extend - расширяет список другим списком
+list1 = [1,2,3,4]
+list2 = [5,6,7,8]
+# list1.append(list2)
+# list1  [1,2,3,4, [5,6,7,8]]
+
+list1.extend(list2)
+# list1  [1,2,3,4,5,6,7,8]
